@@ -1,4 +1,5 @@
-body, html {
+body, 
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -9,13 +10,25 @@ body {
   font-family: Roboto;
   font-size: 12px;
   color: #424242;
+  width:100%;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0; 
 }
 
-header, nav, footer, section, article, div {
+header,
+nav, 
+footer, 
+section, 
+article, 
+div {
   box-sizing: border-box;
 }
 
@@ -50,14 +63,10 @@ ul {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   min-height: 56px;
   transition: min-height 0.3s;
-  width: 100%;
-  min-width:100%;
-  max-width: 100%;
 }
 
 .header__inner {
   width: 100%;
-  max-width:100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -86,7 +95,6 @@ ul {
 
 .nav {
   width: 100%;
-  min-width:100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -110,8 +118,7 @@ ul {
 .nav a {
   text-decoration: none;
   color: #616161;
-  min-width: 48px;
-  min-height:48px;
+  padding: 1.5em;
 }
 
 .nav a:hover {
@@ -129,10 +136,8 @@ ul {
 main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   width: 100%;
-  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-size:1.2em;
 }
 
 /*
@@ -149,7 +154,6 @@ main {
  */
 
 .hero {
-  float: left;
   width: 100%;
   position: relative;
   background-image: url("dog.jpg");
@@ -177,8 +181,6 @@ main {
  */
 
 .top-news {
-  float: right;
-  width: 100%;
   height: 300px;
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
@@ -223,8 +225,6 @@ main {
  */
 
 .scores {
-  width: 100%;
-  float: left;
   padding-top: 1em;
 }
 
@@ -272,8 +272,6 @@ main {
  */
 
 .weather {
-  float: right;
-  width: 100%;
   padding: 1em;
 }
 
@@ -323,14 +321,13 @@ main {
 
 /*
  *
- * Weather
+ * Recent News
  *
  */
 
 .recent-news {
   clear: both;
   padding: 1em;
-  width:100%;
 }
 
 .snippet {
@@ -379,4 +376,51 @@ footer li {
 footer a {
   text-decoration: none;
   color: #333;
+  padding: 1.5em;
+}
+
+
+/* First Changes*/
+
+.content{
+  width:100%;
+}
+.parent-section{
+  width:100%;
+  display: flex;
+  flex-wrap:wrap;
+}
+.hero-news{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/*Media Queries and minor changes*/
+
+@media only screen and (min-width:650px){
+  .hero{
+    width:50%;
+  }
+  .top-news{
+    width:50%;
+  }
+
+}
+
+@media screen and (min-width:800px){
+  body{
+    width:800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .scores__weather{
+    display: flex;
+  }
+  .scores{
+    width:60%;
+  }
+  .weather{
+    width:40%;
+  }
 }
